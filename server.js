@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const countryzRoutes = require('./routes/countryRoutes');
+const metaRoutes = require('./routes/metaRoutes');
 const dotenv = require('dotenv');
 
 dotenv.config();
@@ -13,11 +13,11 @@ app.use(cors());
 app.use(express.json());
 
 // Rutas
-app.use('/api/countries', countryRoutes);
+app.use('/api/metas', metaRoutes);
 
 // Ruta de inicio
 app.get('/', (req, res) => {
-    res.send('API de Países funcionando correctamente con PostgreSQL');
+    res.send('API de Metas funcionando correctamente con PostgreSQL');
 });
 
 // Iniciar servidor

@@ -8,9 +8,9 @@ const pool = new Pool({
     host: process.env.DB_HOST || 'localhost',
     user: process.env.DB_USER || 'postgres',
     password: process.env.DB_PASSWORD || '',
-    database: process.env.DB_NAME || 'paises',
+    database: process.env.DB_NAME || 'minireto',
     port: process.env.DB_PORT || 5432,
-    max: 10, // máximo número de clientes en el pool
+    max: 10, // máximo número de metas en el pool
 });
 
 // Función para verificar la conexión
